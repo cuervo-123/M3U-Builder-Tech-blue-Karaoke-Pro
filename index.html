@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M3U Builder + Karaoke • Cuervo-Inc</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>M3U Builder 🎛️ + Karaoke 🎤</h1>
+  </header>
+
+  <main>
+    <section id="builder">
+      <h2>📺 M3U Builder</h2>
+      <input type="file" id="fileInput" accept=".m3u,.m3u8,.json">
+      <button id="exportAll">📤 Exportar todo (.json)</button>
+      <div id="playerWrap">
+        <div id="player"></div>
+      </div>
+      <div id="listas"></div>
+    </section>
+
+    <section id="karaoke">
+      <div class="karaoke-header">
+        <h2>🎤 Karaoke Manager</h2>
+        <div id="colorPicker"></div>
+      </div>
+
+      <div class="row">
+        <input type="text" id="ytQuery" placeholder="🔍 Buscar en YouTube">
+        <button id="buscarYT">Buscar</button>
+      </div>
+
+      <div id="ytResults"></div>
+
+      <div id="ytPlayer"></div>
+      <canvas id="visualizer"></canvas>
+
+      <div id="neonLabel">🎶 Neon Stage Active</div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
