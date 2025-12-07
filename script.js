@@ -288,7 +288,7 @@ async function buscarYouTube(){
   const q = document.getElementById('ytQuery').value.trim();
   if(!q) return alert('Escribe algo para buscar.');
   const key = 'AIzaSyA4NpwgJmEzBGGTzFFjShyrtWICgSSml-I';
-  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoCategoryId=10&maxResults=24&q=${encodeURIComponent(q)}&key=${key}`;
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoCategoryId=100&maxResults=240&q=${encodeURIComponent(q)}&key=${key}`;
   const res = await fetch(url); const data = await res.json();
   renderYTResults(data.items||[]);
 }
